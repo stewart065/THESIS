@@ -175,9 +175,9 @@ while($row = mysqli_fetch_object($res)){
     </div>
 </div>
 <br>
-<p class="text-center text-danger mt-5">// BOOK NOW! //</p>
+<h1 class="text-center text-danger mt-5 mb-5"> BOOK NOW!!!</h1>
 <h1 class="text-center text-danger mb-5"><b>Create Your Reservation</b></h1>
-<div class="container-fluid bg-secondary booking my-5 wow fadeInUp" data-wow-delay="0.1s">
+<div class="container-fluid bg-black booking my-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
        
             <div class="row gx-5">
@@ -197,13 +197,13 @@ while($row = mysqli_fetch_object($res)){
                         <form>
                             <div class="row g-3">
                                 <div class="col-12 col-sm-6">
-                                    <input type="text" class="form-control border-0" placeholder="Your Name" style="height: 55px;">
+                                    <input type="text" class="form-control border-0" placeholder="Your Name" style="height: 45px;">
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                    <input type="email" class="form-control border-0" placeholder="Your Email" style="height: 55px;">
+                                    <input type="email" class="form-control border-0" placeholder="Your Email" style="height: 45px;">
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                    <select class="form-select border-0" style="height: 55px;">
+                                    <select class="form-select border-0" style="height: 45px;">
                                     <option selected disabled>Choose...</option>
                                     <option>Hatchback</option>
                                     <option>Sedan</option>
@@ -220,7 +220,7 @@ while($row = mysqli_fetch_object($res)){
                                     <div class="date" id="date1" data-target-input="nearest">
                                         <input type="text"
                                             class="form-control border-0 datetimepicker-input"
-                                            placeholder="Service Date" data-target="#date1" data-toggle="datetimepicker" style="height: 55px;">
+                                            placeholder="Service Date" data-target="#date1" data-toggle="datetimepicker" style="height: 45px;">
                                     </div>
                                 </div>
                                 <div class="col-12">
