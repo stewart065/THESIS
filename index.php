@@ -154,13 +154,13 @@ while($row = mysqli_fetch_object($res)){
     </div>
 </div>
 <style>
-.hover-zoom:hover .custom-card-img {
-    transform: scale(1.1); /* You can adjust the zoom level as needed */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add more shadow on hover */
-}
-.hover-zoom .custom-card-img {
-    transform: scale(0.8); /* Initial zoom-out level, adjust as needed */
-}
+  .hover-zoom:hover .custom-card-img {
+      transform: scale(1.1); /* You can adjust the zoom level as needed */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add more shadow on hover */
+  }
+  .hover-zoom .custom-card-img {
+      transform: scale(0.8); /* Initial zoom-out level, adjust as needed */
+  }
   </style>
 <br>
 <p class="text-center text-danger mt-5">// BOOK NOW! //</p>
