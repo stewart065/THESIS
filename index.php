@@ -126,7 +126,7 @@ while ($row = mysqli_fetch_object($res)) {
     <h1 class="text-center text-danger mb-5"><b>Our Products</b></h1>
     <div class="row row-cols-1 row-cols-lg-5 g-2 g-lg-3">
       <?php
-      $sql = "SELECT product .product_id, product_name,price,quantity,sold,image, AVG(rated_product.rated_points) as rate_points  FROM product 
+      $sql = "SELECT product .product_id, product_name,price,description,brand,quantity,sold,image, AVG(rated_product.rated_points) as rate_points  FROM product 
             LEFT JOIN rated_product ON product.product_id = rated_product.product_id 
             where  quantity != 0  OR rate_status = 'RATED'    GROUP BY product_name ORDER BY rate_points DESC LIMIT 5;";
       $res  = $con->query($sql);
@@ -141,6 +141,8 @@ while ($row = mysqli_fetch_object($res)) {
         $sold = $row->sold;
         $price = $row->price;
         $points = $row->rate_points;
+        $description = $row->description;
+        $brand = $row->brand;
       ?>
         <a href="login.php?pid= <?php echo $prodid; ?>">
         <div class="col">
@@ -149,17 +151,21 @@ while ($row = mysqli_fetch_object($res)) {
             <img src="product_image/<?php echo $img; ?>" alt="<?php echo $name; ?>" class="card-img-top custom-card-img shadow" style="height: 200px; object-fit: cover; transition: transform 0.3s ease-in-out;">
         </div>
         <div class="card-body">
-            <p class="card-text product-name"><?php echo $name; ?></p>
+            <h4 class="card-title product-label" style="color: black;">Product: <?php echo $name;?></h4>
+            <p class="card-text " style="color: black;">Brand: <?php echo $brand; ?></p>
+            <p class="card-text product-description-label" style="color: black;">Description: <br> <?php echo $description; ?></p>
         </div>
         <div class="card-footer bg-red d-flex justify-content-between align-items-center shadow">
             <div class="rating text-warning">
-                <label for="asd" class="fw-bold"><?php echo $points; ?></label>
+                <label for="asd" class="fw-bold">Rating:</label>
+                <span class="fw-bold"><?php echo $points; ?></span>
                 <i class="fa fa-star"></i>
             </div>
             <div class="text-black">Sold: <span class="fw-bold"><?php echo $sold; ?></span></div>
         </div>
     </div>
 </div>
+
         </a>
       <?php } ?>
     </div>
