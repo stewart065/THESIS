@@ -45,7 +45,7 @@ while($row = mysqli_fetch_object($res)){
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
 <link rel="stylesheet" type="text/css" href="css/owl.css">
-
+<link rel="stylesheet" type="text/css" href="css/index.css">
 
 
 <title>Landing page | Trans-Master APARORS</title>
@@ -89,47 +89,23 @@ while($row = mysqli_fetch_object($res)){
     </div>
     </nav> 
 <body>
-<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel"  data-mdb-interval="500">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+
+<div class="title-container">
+<div class="homepage-img"><img class="img-bg" src="pictures/homepage-title-bg.jpg" alt=""></div>
+<div class="label-title">
+  <p class="trans-master">
+    <span class="text-wrapper">Trans-Master</span>
+    <span class="text-wrapper-2">Enterprises &amp; <br> Services Shop</span>
+  </p>
 </div>
-  
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="pictures/wew.png" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h2 class="text-danger fw-bold">// Trans-Master Enterprises & Services Shop //</hh2>
-        <h3 class="text-danger fw-bold">Qualified Car Repair Service Shop</h3>
-        <a href="login.php" type="button" class="btn btn-danger btn-lg">Reserve Now!</a>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="pictures/rey.png" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h2 class="text-danger fw-bold">// Trans-Master Enterprises & Services Shop //</h2>
-        <h3 class="text-danger fw-bold"> Qualified Autoparts Products</h3>
-        <a href="login.php" type="button" class="btn btn-danger btn-lg">Reserve Now!</a>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="pictures/wew.png" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block" style="color:black;">
-      <h2 class="text-danger fw-bold">// Trans-Master Enterprises & Services Shop //</h2>
-      <a href="login.php" type="button" class="btn btn-danger btn-lg">Reserve Now!</a>
-      </div>
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
+<div class="label-sub">
+  <p class="wrapper-sub">Qualified Autoparts and Products</p>
 </div>
+
+<button class="reserve-btn">Reserve Now</button>
+</div>
+
+
 <!-- --------------------end -->
 
 <div class="container-fluid mt-5">
