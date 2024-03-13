@@ -112,9 +112,17 @@ while ($row = mysqli_fetch_object($res)) {
 
 
 <!-- --------------------end -->
-
+<style>
+  .hover-zoom:hover .custom-card-img {
+      transform: scale(1.1); /* You can adjust the zoom level as needed */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add more shadow on hover */
+  }
+  .hover-zoom .custom-card-img {
+      transform: scale(0.8); /* Initial zoom-out level, adjust as needed */
+  }
+  </style>
   <div class="container-fluid mt-5">
-    <p class="text-center text-danger">// OUR BEST PRODUCTS //</p>
+    <!-- <p class="text-center text-danger">// OUR BEST PRODUCTS //</p> -->
     <h1 class="text-center text-danger mb-5"><b>Our Products</b></h1>
     <div class="row row-cols-1 row-cols-lg-5 g-2 g-lg-3">
       <?php
@@ -135,30 +143,29 @@ while ($row = mysqli_fetch_object($res)) {
         $points = $row->rate_points;
       ?>
         <a href="login.php?pid= <?php echo $prodid; ?>">
-          <div class="col">
-            <div class="border bg-light p-2 " id="card">
-              <div class="text-div">
-                <figure><img src="product_image/<?php echo $img; ?>" alt="" style="width:100%; height:200px;"></figure>
-                <!-- <p class=" text-danger fw-bold text-center"><?php echo $name; ?></p> -->
-                <p class="product-name"> <?php echo $name; ?>
-                <div class="bg-light d-flex justify-content-between">
-                  <div class=" text-warning">
-                    <label for="" id="asd"><?php echo $points; ?></label>
-                    <i class="fa fa-star"></i>
-                  </div>
-                  <div class="text-muted">Sold:<span class="fw-bold"><?php echo $sold; ?></span></p>
-                  </div>
-                </div>
-              </div>
+        <div class="col">
+    <div class="card custom-card border-0 shadow-lg hover-zoom" style="background-color: rgba(169, 169, 169, 0.65);">
+        <div class="img-container overflow-hidden">
+            <img src="product_image/<?php echo $img; ?>" alt="<?php echo $name; ?>" class="card-img-top custom-card-img shadow" style="height: 200px; object-fit: cover; transition: transform 0.3s ease-in-out;">
+        </div>
+        <div class="card-body">
+            <p class="card-text product-name"><?php echo $name; ?></p>
+        </div>
+        <div class="card-footer bg-red d-flex justify-content-between align-items-center shadow">
+            <div class="rating text-warning">
+                <label for="asd" class="fw-bold"><?php echo $points; ?></label>
+                <i class="fa fa-star"></i>
             </div>
-          </div>
+            <div class="text-black">Sold: <span class="fw-bold"><?php echo $sold; ?></span></div>
+        </div>
+    </div>
+</div>
         </a>
       <?php } ?>
     </div>
   </div>
   <br>
-  <p class="text-center text-danger mt-5">// BOOK NOW! //</p>
-  <h1 class="text-center text-danger mb-5"><b>Create Your Reservation</b></h1>
+  <h1 class="text-center textmil text-danger mb-5"><b>Create Your Reservation</b></h1>
   <div class="container-fluid bg-secondary booking my-5 wow fadeInUp" data-wow-delay="0.1s">
     <div class="container">
 
