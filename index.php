@@ -59,7 +59,7 @@ while ($row = mysqli_fetch_object($res)) {
 <nav class="navbar navbar-expand-lg " id="nav-top">
   <div class="container-fluid">
     <a class="navbar-brand text-light">
-      <img src="pictures/logo.png" alt="" width="45" height="45" class="">
+      <img src="pictures/logo.png" alt="" width="50" height="50" class="">
       <b class="">TRANS-MASTER</b>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -544,20 +544,20 @@ while ($row = mysqli_fetch_object($res)) {
   }
 
   .employeeName {
-    font-size: 1vw;
-  }
-
-  .positionName {
-    font-size: 1vw;
-  }
-
-  @media screen and (min-width: 100px) {
-    .employeeName {
     font-size: 27px;
   }
 
   .positionName {
     font-size: 13px;
   }
+
+  /* @media screen and (min-width: 150%) {
+    .employeeName {
+    font-size: 10px;
   }
+
+  .positionName {
+    font-size: 10px;
+  }
+  } */
 </style>
