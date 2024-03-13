@@ -1,0 +1,19 @@
+nav
+{
+    font-family: "Montserrat", sans-serif !important;
+
+    opacity: 0.9;
+
+    text-align: center;
+}
+
+#nav-top .navbar-toggler {
+    border-color: #ffffff; /* Adjust the border color of the toggler button as needed */
+    background-color: white;
+    color: rgb(255, 255, 255);
+  }
+
+#transMasterName
+{
+ 
+}

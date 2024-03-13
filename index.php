@@ -1,93 +1,98 @@
 <?php
-    session_start();
-    include 'config.php';
+session_start();
+include 'config.php';
 
-    $sql = "SELECT COUNT(employee_id) as emnum FROM employee";
+$sql = "SELECT COUNT(employee_id) as emnum FROM employee";
 $res  = $con->query($sql);
-if(!$res){
+if (!$res) {
   echo "error";
 }
-while($row = mysqli_fetch_object($res)){
+while ($row = mysqli_fetch_object($res)) {
   $num = $row->emnum;
-}   
+}
 
 $sql1 = "SELECT COUNT(customer_id) as user FROM users WHERE Type='Customer'";
 $res  = $con->query($sql1);
-if(!$res){
+if (!$res) {
   echo "error";
 }
-while($row = mysqli_fetch_object($res)){
+while ($row = mysqli_fetch_object($res)) {
   $user = $row->user;
 }
 
 $sql2 = "SELECT COUNT(product_id) as prod FROM product ";
 $res  = $con->query($sql2);
-if(!$res){
+if (!$res) {
   echo "error";
 }
-while($row = mysqli_fetch_object($res)){
- 
-      $prod = $row->prod;  
+while ($row = mysqli_fetch_object($res)) {
+
+  $prod = $row->prod;
 }
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="css/newStyleNavBar.css">
+
 <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
 <link rel="stylesheet" type="text/css" href="css/owl.css">
 <link rel="stylesheet" type="text/css" href="css/index.css">
 
 
-<title>Landing page | Trans-Master APARORS</title>
-    <link rel="shortcut icon" href="pictures/logo.png" type="image/x-icon">
+  <title>Landing page | Trans-Master APARORS</title>
+  <link rel="shortcut icon" href="pictures/logo.png" type="image/x-icon">
 </head>
 
-<nav class="navbar navbar-expand-lg navbar-danger" id="nav-top">
-    <div class="container-fluid">
+<nav class="navbar navbar-expand-lg " id="nav-top">
+  <div class="container-fluid">
     <a class="navbar-brand text-light">
-      <img src="pictures/logo.png" alt="" width="40" height="40" class="d-inline-block align-text-top">
-      TRANS-MASTER
+      <img src="pictures/logo.png" alt="" width="45" height="45" class="">
+      <b class="">TRANS-MASTER</b>
     </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav mx-auto" style="font-size:20px;">
-        </ul>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav mx-auto" style="font-size:18px;">
+      </ul>
 
-       
-        <ul class="navbar-nav sm-icons mr-0">
-            
-         <li class="nav-item ">
-                <a class="nav-link text-white" href="index.php">Home</a>
-            </li>
-            <li class="nav-item ">
-                <a class="nav-link text-white" href="">About</a>
-            </li>
-            <li class="nav-item ">
-                <a class="nav-link text-white" href="">Services</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white" href="signup.php">Register</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white"href="login.php"> Log in</a>
-            </li> 
-            
-        </ul>    
-        </div>
+
+      <ul class="navbar-nav sm-icons mr-0">
+
+        <li class="nav-item">
+          <a class="nav-link text-white" href="index.php">Home</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link text-white" href="">About</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link text-white" href="">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="signup.php">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="login.php"> Login</a>
+        </li>
+
+      </ul>
     </div>
-    </nav> 
+  </div>
+</nav>
+
 <body>
 
 <div class="title-container">
@@ -112,23 +117,23 @@ while($row = mysqli_fetch_object($res)){
 <!-- <p class="text-center text-danger">// OUR BEST PRODUCTS //</p> -->
 <h1 class="text-center text-danger mb-5"><b>Our Products</b></h1>
     <div class="row row-cols-1 row-cols-lg-5 g-2 g-lg-3">
-        <?php
-            $sql = "SELECT product .product_id, product_name,price,quantity,sold,image, AVG(rated_product.rated_points) as rate_points  FROM product 
+      <?php
+      $sql = "SELECT product .product_id, product_name,price,quantity,sold,image, AVG(rated_product.rated_points) as rate_points  FROM product 
             LEFT JOIN rated_product ON product.product_id = rated_product.product_id 
-            where  quantity != 0  OR rate_status = 'RATED'    GROUP BY product_name ORDER BY rate_points DESC LIMIT 5;";   
-            $res  = $con->query($sql);
-            if(!$res){
-                echo "error";
-            } 
-            while ($row = mysqli_fetch_object($res)) {
-            $prodid = $row->product_id;
-            $img = $row->image;
-            $name = $row->product_name;
-            $qty = $row->quantity;
-            $sold = $row->sold;
-            $price = $row->price;
-            $points = $row->rate_points;
-            ?> 
+            where  quantity != 0  OR rate_status = 'RATED'    GROUP BY product_name ORDER BY rate_points DESC LIMIT 5;";
+      $res  = $con->query($sql);
+      if (!$res) {
+        echo "error";
+      }
+      while ($row = mysqli_fetch_object($res)) {
+        $prodid = $row->product_id;
+        $img = $row->image;
+        $name = $row->product_name;
+        $qty = $row->quantity;
+        $sold = $row->sold;
+        $price = $row->price;
+        $points = $row->rate_points;
+      ?>
         <a href="login.php?pid= <?php echo $prodid; ?>">
         <div class="col">
     <div class="card custom-card border-0 shadow-lg hover-zoom" style="background-color: rgba(169, 169, 169, 0.65);">
@@ -150,7 +155,7 @@ while($row = mysqli_fetch_object($res)){
 </div>
 
         </a>
-        <?php }?>
+      <?php } ?>
     </div>
 </div>
 <style>
@@ -255,19 +260,23 @@ while($row = mysqli_fetch_object($res)){
                         <small> <?php echo "N/A"; ?></small>
                     <?php } ?>   
                 </div>
-                <?php $recent=$row['employee_id'];  }?>         
-	        </div>  
+              </div>
+
+            </div>
+          <?php $recent = $row['employee_id'];
+          } ?>
         </div>
+      </div>
     </div>
-</section>
+  </section>
 </body>
 <footer class="bg-dark text-center text-white">
   <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
     <div class="me-5 d-none d-lg-block">
       <span>Get connected with us on social networks:</span>
     </div>
-    <div> 
-      <a href="login.php" class="me-4 text-reset hover" >
+    <div>
+      <a href="login.php" class="me-4 text-reset hover">
         <i class="fa fa-facebook-f"></i>
       </a>
       <a href="login.php" class="me-4 text-reset hover">
@@ -291,9 +300,9 @@ while($row = mysqli_fetch_object($res)){
     <div class="container text-center text-md-start mt-5">
       <div class="row mt-3">
         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-        <h6 class="text-uppercase fw-bold mb-4 text-danger">
+          <h6 class="text-uppercase fw-bold mb-4 text-danger">
             <img src="pictures/logo.png" alt="" width="40" height="40" class="d-inline-block align-text-top">
-           TRANS-MASTER
+            TRANS-MASTER
           </h6>
           <p>
             Trans-master Enterprises and Service Shop, this establishment is one of the most famous for vehicle repair in Bogo City.
@@ -301,7 +310,7 @@ while($row = mysqli_fetch_object($res)){
         </div>
         <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
           <h6 class="text-uppercase fw-bold mb-4">
-          Services Offers  
+            Services Offers
           </h6>
           <p>
             <a href="login.php" class="text-reset">Autoparts Product</a>
@@ -352,129 +361,209 @@ while($row = mysqli_fetch_object($res)){
       </div>
     </div>
   </section>
-    <hr>
-   Maintenance by Reymon Ariban
-    © 2023 Copyright:
-    <a class="text-white" href="https://www.facebook.com/reymon.ariban">TRANS-MASTER-aparors.com</a>
+  <hr>
+  Maintenance by Reymon Ariban
+  © 2023 Copyright:
+  <a class="text-white" href="https://www.facebook.com/reymon.ariban">TRANS-MASTER-aparors.com</a>
 
 </footer>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script> 
-	<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" ></script> -->
-	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/owl.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" ></script> -->
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/owl.js"></script>
+
 </html>
 <style>
- 
-a
-    {
-      text-decoration: none;
-    }
+  a {
+    text-decoration: none;
+  }
 
-    
-.hover{
-    text-decoration:none;
+
+  .hover {
+    text-decoration: none;
     padding: 8px;
-}
-.hover:hover{
-      width:50px;
-      height: 50px;
-      border-radius:120px;
-      background: radial-gradient(
-      56.58% 56.58% at 50.09% 39.71%,
-      #ed5450 27.08%,
-      #bd1e2e 100%
-    );
   }
 
-h2{
-  margin-top:30px;
-  margin-bottom:30px;
-  text-align:center;
-}
-  
-#card{
- height:340px;
-}
-
-.text-div {
- 
-  width: 100%;
-  height: 40px;
-  line-height: .5 !important;
-  /* margin-top: 20px; */
-
-}
-    
-.product-name {
-  margin-top:25px;
-font-size: 18px;
-font-weight: bold;
-height: 30px;
-width: 100%;
-line-height: normal;
-overflow: hidden;
-text-align: center;
-}
-.title{
-  color:rgb(218, 91, 32);
-  font-size:12px;
-  text-align: center;
-}
-figure {
-	margin: 0;
-	padding: 0;
-	background: #fff;
-	overflow: hidden;
-}  
-.text-div img{
-  -webkit-transform: scale(1);
-	transform: scale(1);
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
-}
-.text-div:hover img{
-  -webkit-transform: scale(1.1);
-	transform: scale(1.1);
-}
-.viewmore{
-  border-radius: 18px;
-  /* width:50%; */
-  background-color: rgb(22, 141, 58);
-  color: white;
-}
-.viewmore:hover{
-  border-color: rgb(22, 141, 58);
-  color:rgb(22, 141, 58);
-  background-color: none;
-}
-
-
-#nav-top {
-    background: radial-gradient(
-      56.58% 56.58% at 50.09% 39.71%,
-      #ed5450 27.08%,
-      #bd1e2e 100%
-    );
+  .hover:hover {
+    width: 50px;
+    height: 50px;
+    border-radius: 120px;
+    background: radial-gradient(56.58% 56.58% at 50.09% 39.71%,
+        #ed5450 27.08%,
+        #bd1e2e 100%);
   }
 
-#logoname{
-    color:white;
-}
+  h2 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
 
-#ul-li{
-    font-size:18px;
-}  
+  #card {
+    height: 340px;
+  }
+
+  .text-div {
+
+    width: 100%;
+    height: 40px;
+    line-height: .5 !important;
+    /* margin-top: 20px; */
+
+  }
+
+  .product-name {
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    height: 30px;
+    width: 100%;
+    line-height: normal;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .title {
+    color: rgb(218, 91, 32);
+    font-size: 12px;
+    text-align: center;
+  }
+
+  figure {
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    overflow: hidden;
+  }
+
+  .text-div img {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+  }
+
+  .text-div:hover img {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  .viewmore {
+    border-radius: 18px;
+    /* width:50%; */
+    background-color: rgb(22, 141, 58);
+    color: white;
+  }
+
+  .viewmore:hover {
+    border-color: rgb(22, 141, 58);
+    color: rgb(22, 141, 58);
+    background-color: none;
+  }
 
 
-.nav-item a:hover{
-    color:white;
-        border-bottom: 3px solid #00f;
+  #nav-top {
+    background: radial-gradient(56.58% 56.58% at 50.09% 39.71%,
+        #ed5450 27.08%,
+        #bd1e2e 100%);
+  }
 
-}
+  #logoname {
+    color: white;
+  }
 
-    
+  #ul-li {
+    font-size: 18px;
+  }
+
+
+  .nav-item a:hover {
+    color: white;
+    border-bottom: 3px solid white;
+
+  }
+
+  .ourStaffStyle {
+    font-family: "Montserrat", sans-serif !important;
+  }
+
+  .slider-card {
+    height: 25vh;
+    width: 100% !important;
+
+    /* width: 100px; */
+    font-family: "Montserrat", sans-serif !important;
+
+    /* visibility: hidden !important; */
+
+    background-color: white !important;
+    border-radius: 25px !important;
+  }
+
+  .slider-card .employeeName .positionName {
+    /* visibility: hidden !important; */
+  }
+
+  .imageProfileContainer {
+    height: 100px !important;
+    width: 100px !important;
+
+    /* padding-top: 10px; */
+    justify-content: center;
+    text-align: center;
+
+    margin-top: 25px;
+
+    border-radius: 50% !important;
+    opacity: 0.9 !important;
+
+    overflow: hidden;
+    /* Ensure the image stays within the circle */
+    border: 5px solid white;
+    /* Set your desired border color */
+  }
+
+  .slider .owl-item.active.center .slider-card {
+    transform: scale(1.15);
+    opacity: 1;
+    background: #bd1e2e !important;
+    color: #fff;
+
+    /* visibility: visible !important; */
+
+    filter: drop-shadow(16px 16px);
+  }
+
+  .slider .owl-item.active.center .slider-card .positionName {
+    background-color: white;
+    border-radius: 20px;
+    color: black;
+  }
+
+  .containerForDetails {
+    justify-content: center;
+    text-align: center;
+
+    margin-top: 25px;
+    margin-left: 50px !important;
+  }
+
+  .employeeName {
+    font-size: 1vw;
+  }
+
+  .positionName {
+    font-size: 1vw;
+  }
+
+  @media screen and (min-width: 100px) {
+    .employeeName {
+    font-size: 27px;
+  }
+
+  .positionName {
+    font-size: 13px;
+  }
+  }
 </style>
-
-
-                  
