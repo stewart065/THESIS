@@ -1,0 +1,25 @@
+#nav-top
+{
+    font-family: "Montserrat", sans-serif !important; 
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    /* background-color: red; */
+
+    opacity: 0.9 !important;
+
+    /* height: 65px;
+    max-height: 1000px; */
+}
+
+  #nav-top .navbar-toggler {
+    border-color: #ffffff; /* Adjust the border color of the toggler button as needed */
+    background-color: white;
+    color: rgb(255, 255, 255);
+  }
+
+.brandName
+{
+    text-align: center !important;
+}
