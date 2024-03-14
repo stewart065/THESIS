@@ -453,3 +453,154 @@
   .reserve-btn:hover{
     background-color: #ff545f;
   }
+  a {
+    text-decoration: none;
+  }
+
+
+  .hover-zoom:hover .custom-card-img {
+      transform: scale(1.1); 
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+  }
+  .hover-zoom .custom-card-img {
+      transform: scale(0.8); 
+  }
+
+  .text-div {
+
+    width: 100%;
+    height: 40px;
+    line-height: .5 !important;
+    /* margin-top: 20px; */
+
+  }
+
+  .title {
+    color: rgb(218, 91, 32);
+    font-size: 12px;
+    text-align: center;
+  }
+  .text-div img {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+  }
+
+  .text-div:hover img {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+ */
+
+  .viewmore:hover {
+    border-color: rgb(22, 141, 58);
+    color: rgb(22, 141, 58);
+    background-color: none;
+  }
+
+
+  #nav-top {
+    background: radial-gradient(56.58% 56.58% at 50.09% 39.71%,
+        #ed5450 27.08%,
+        #bd1e2e 100%);
+  }
+
+  #logoname {
+    color: white;
+  }
+
+  #ul-li {
+    font-size: 18px;
+  }
+
+
+  .nav-item a:hover {
+    color: white;
+    border-bottom: 3px solid white;
+
+  }
+
+  .ourStaffStyle {
+    font-family: "Montserrat", sans-serif !important;
+  }
+
+  .slider-card {
+    height: 25vh;
+    width: 100% !important;
+
+    /* width: 100px; */
+    font-family: "Montserrat", sans-serif !important;
+
+    /* visibility: hidden !important; */
+
+    background-color: white !important;
+    border-radius: 25px !important;
+  }
+
+  .slider-card .employeeName .positionName {
+    /* visibility: hidden !important; */
+  }
+
+  .imageProfileContainer {
+    height: 100px !important;
+    width: 100px !important;
+
+    /* padding-top: 10px; */
+    justify-content: center;
+    text-align: center;
+
+    margin-top: 25px;
+
+    border-radius: 50% !important;
+    opacity: 0.9 !important;
+
+    overflow: hidden;
+    /* Ensure the image stays within the circle */
+    border: 5px solid white;
+    /* Set your desired border color */
+  }
+
+  .slider .owl-item.active.center .slider-card {
+    transform: scale(1.15);
+    opacity: 1;
+    background: #bd1e2e !important;
+    color: #fff;
+
+    /* visibility: visible !important; */
+
+    filter: drop-shadow(16px 16px);
+  }
+
+  .slider .owl-item.active.center .slider-card .positionName {
+    background-color: white;
+    border-radius: 20px;
+    color: black;
+  }
+
+  .containerForDetails {
+    justify-content: center;
+    text-align: center;
+
+    margin-top: 25px;
+    margin-left: 50px !important;
+  }
+
+  .employeeName {
+    font-size: 27px;
+  }
+
+  .positionName {
+    font-size: 13px;
+  }
+
+  /* @media screen and (min-width: 150%) {
+    .employeeName {
+    font-size: 10px;
+  }
+
+  .positionName {
+    font-size: 10px;
+  }
+  } */
