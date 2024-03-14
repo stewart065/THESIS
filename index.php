@@ -76,10 +76,10 @@ while ($row = mysqli_fetch_object($res)) {
           <a class="nav-link text-white" href="index.php">Home</a>
         </li>
         <li class="nav-item ">
-          <a class="nav-link text-white" href="">About</a>
+          <a class="nav-link text-white" href="#section-one">About</a>
         </li>
         <li class="nav-item ">
-          <a class="nav-link text-white" href="">Services</a>
+          <a class="nav-link text-white" href="#section-one">Services</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-white" href="signup.php">Register</a>
@@ -278,36 +278,12 @@ while ($row = mysqli_fetch_object($res)) {
     </div>
   </section>
 </body>
-<footer class="bg-dark text-center text-white">
-  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-    <div class="me-5 d-none d-lg-block">
-      <span>Get connected with us on social networks:</span>
-    </div>
-    <div>
-      <a href="login.php" class="me-4 text-reset hover">
-        <i class="fa fa-facebook-f"></i>
-      </a>
-      <a href="login.php" class="me-4 text-reset hover">
-        <i class="fa fa-twitter"></i>
-      </a>
-      <a href="login.php" class="me-4 text-reset hover">
-        <i class="fa fa-google"></i>
-      </a>
-      <a href="login.php" class="me-4 text-reset hover">
-        <i class="fa fa-instagram"></i>
-      </a>
-      <a href="login.php" class="me-4 text-reset hover">
-        <i class="fa fa-linkedin"></i>
-      </a>
-      <a href="login.php" class="me-4 text-reset hover">
-        <i class="fa fa-github"></i>
-      </a>
-    </div>
-  </section>
-  <section class="">
+<footer class="bg-dark text-center text-white footer-tab">
+  
+  <section class="section-one" id="section-one">
     <div class="container text-center text-md-start mt-5">
       <div class="row mt-3">
-        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 mt-5">
           <h6 class="text-uppercase fw-bold mb-4 text-danger">
             <img src="pictures/logo.png" alt="" width="40" height="40" class="d-inline-block align-text-top">
             TRANS-MASTER
@@ -317,7 +293,7 @@ while ($row = mysqli_fetch_object($res)) {
           </p>
         </div>
         <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-          <h6 class="text-uppercase fw-bold mb-4">
+          <h6 class="text-uppercase fw-bold mb-4 mt-5">
             Services Offers
           </h6>
           <p>
@@ -337,7 +313,7 @@ while ($row = mysqli_fetch_object($res)) {
           </p>
         </div>
         <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-          <h6 class="text-uppercase fw-bold mb-4">
+          <h6 class="text-uppercase fw-bold mb-4 mt-5">
             Other links
           </h6>
           <p>
@@ -357,7 +333,7 @@ while ($row = mysqli_fetch_object($res)) {
           </p>
         </div>
         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-          <h6 class="text-uppercase fw-bold mb-4">Contact Details</h6>
+          <h6 class="text-uppercase fw-bold mb-4 mt-5">Contact Details</h6>
           <p><i class="fa fa-home me-3"></i> National Highwayy, Bogo City, Cebu, Philippines, 6010</p>
           <p>
             <i class="fa fa-envelope me-3"></i>
