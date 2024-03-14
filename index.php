@@ -51,7 +51,6 @@ while ($row = mysqli_fetch_object($res)) {
 <link rel="stylesheet" type="text/css" href="css/owl.css">
 <link rel="stylesheet" type="text/css" href="css/index.css">
 
-
   <title>Landing page | Trans-Master APARORS</title>
   <link rel="shortcut icon" href="pictures/logo.png" type="image/x-icon">
 </head>
@@ -60,7 +59,8 @@ while ($row = mysqli_fetch_object($res)) {
   <div class="container-fluid">
     <a class="navbar-brand text-light">
       <img src="pictures/logo.png" alt="" width="50" height="50" class="">
-      <b class="">TRANS-MASTER</b>
+       <a style="text-decoration: none; color:white; font-size: 23px;" href="index.php"><b class="">TRANS-MASTER</b></a>
+      
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -107,7 +107,8 @@ while ($row = mysqli_fetch_object($res)) {
   <p class="wrapper-sub">Qualified Autoparts and Products</p>
 </div>
 
-<button class="reserve-btn">Reserve Now</button>
+
+<a href="login.php"><button class="reserve-btn">Reserve Now</button></a>
 </div>
 
 
