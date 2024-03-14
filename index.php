@@ -51,7 +51,6 @@ while ($row = mysqli_fetch_object($res)) {
 <link rel="stylesheet" type="text/css" href="css/owl.css">
 <link rel="stylesheet" type="text/css" href="css/index.css">
 
-
   <title>Landing page | Trans-Master APARORS</title>
   <link rel="shortcut icon" href="pictures/logo.png" type="image/x-icon">
 </head>
@@ -60,7 +59,8 @@ while ($row = mysqli_fetch_object($res)) {
   <div class="container-fluid">
     <a class="navbar-brand text-light">
       <img src="pictures/logo.png" alt="" width="50" height="50" class="">
-      <b class="">TRANS-MASTER</b>
+       <a style="text-decoration: none; color:white; font-size: 23px;" href="index.php"><b class="">TRANS-MASTER</b></a>
+      
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -76,10 +76,10 @@ while ($row = mysqli_fetch_object($res)) {
           <a class="nav-link text-white" href="index.php">Home</a>
         </li>
         <li class="nav-item ">
-          <a class="nav-link text-white" href="">About</a>
+          <a class="nav-link text-white" href="#section-one">About</a>
         </li>
         <li class="nav-item ">
-          <a class="nav-link text-white" href="">Services</a>
+          <a class="nav-link text-white" href="#section-one">Services</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-white" href="signup.php">Register</a>
@@ -107,7 +107,10 @@ while ($row = mysqli_fetch_object($res)) {
   <p class="wrapper-sub">Qualified Autoparts and Products</p>
 </div>
 
+<a href="login.php">
 <button class="reserve-btn">Reserve Now</button>
+</a>
+
 </div>
 
 
@@ -271,36 +274,12 @@ while ($row = mysqli_fetch_object($res)) {
     </div>
   </section>
 </body>
-<footer class="bg-dark text-center text-white">
-  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-    <div class="me-5 d-none d-lg-block">
-      <span>Get connected with us on social networks:</span>
-    </div>
-    <div>
-      <a href="login.php" class="me-4 text-reset hover">
-        <i class="fa fa-facebook-f"></i>
-      </a>
-      <a href="login.php" class="me-4 text-reset hover">
-        <i class="fa fa-twitter"></i>
-      </a>
-      <a href="login.php" class="me-4 text-reset hover">
-        <i class="fa fa-google"></i>
-      </a>
-      <a href="login.php" class="me-4 text-reset hover">
-        <i class="fa fa-instagram"></i>
-      </a>
-      <a href="login.php" class="me-4 text-reset hover">
-        <i class="fa fa-linkedin"></i>
-      </a>
-      <a href="login.php" class="me-4 text-reset hover">
-        <i class="fa fa-github"></i>
-      </a>
-    </div>
-  </section>
-  <section class="">
+<footer class="bg-dark text-center text-white footer-tab">
+  
+  <section class="section-one" id="section-one">
     <div class="container text-center text-md-start mt-5">
       <div class="row mt-3">
-        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 mt-5">
           <h6 class="text-uppercase fw-bold mb-4 text-danger">
             <img src="pictures/logo.png" alt="" width="40" height="40" class="d-inline-block align-text-top">
             TRANS-MASTER
@@ -310,7 +289,7 @@ while ($row = mysqli_fetch_object($res)) {
           </p>
         </div>
         <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-          <h6 class="text-uppercase fw-bold mb-4">
+          <h6 class="text-uppercase fw-bold mb-4 mt-5">
             Services Offers
           </h6>
           <p>
@@ -330,7 +309,7 @@ while ($row = mysqli_fetch_object($res)) {
           </p>
         </div>
         <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-          <h6 class="text-uppercase fw-bold mb-4">
+          <h6 class="text-uppercase fw-bold mb-4 mt-5">
             Other links
           </h6>
           <p>
@@ -350,7 +329,7 @@ while ($row = mysqli_fetch_object($res)) {
           </p>
         </div>
         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-          <h6 class="text-uppercase fw-bold mb-4">Contact Details</h6>
+          <h6 class="text-uppercase fw-bold mb-4 mt-5">Contact Details</h6>
           <p><i class="fa fa-home me-3"></i> National Highwayy, Bogo City, Cebu, Philippines, 6010</p>
           <p>
             <i class="fa fa-envelope me-3"></i>
