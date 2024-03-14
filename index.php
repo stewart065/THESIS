@@ -113,13 +113,7 @@ while ($row = mysqli_fetch_object($res)) {
 
 <!-- --------------------end -->
 <style>
-  .hover-zoom:hover .custom-card-img {
-      transform: scale(1.1); /* You can adjust the zoom level as needed */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add more shadow on hover */
-  }
-  .hover-zoom .custom-card-img {
-      transform: scale(0.8); /* Initial zoom-out level, adjust as needed */
-  }
+ 
   </style>
   <div class="container-fluid mt-5">
     <!-- <p class="text-center text-danger">// OUR BEST PRODUCTS //</p> -->
@@ -387,28 +381,12 @@ while ($row = mysqli_fetch_object($res)) {
   }
 
 
-  .hover {
-    text-decoration: none;
-    padding: 8px;
+  .hover-zoom:hover .custom-card-img {
+      transform: scale(1.1); 
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
   }
-
-  .hover:hover {
-    width: 50px;
-    height: 50px;
-    border-radius: 120px;
-    background: radial-gradient(56.58% 56.58% at 50.09% 39.71%,
-        #ed5450 27.08%,
-        #bd1e2e 100%);
-  }
-
-  h2 {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    text-align: center;
-  }
-
-  #card {
-    height: 340px;
+  .hover-zoom .custom-card-img {
+      transform: scale(0.8); 
   }
 
   .text-div {
@@ -420,30 +398,11 @@ while ($row = mysqli_fetch_object($res)) {
 
   }
 
-  .product-name {
-    margin-top: 25px;
-    font-size: 18px;
-    font-weight: bold;
-    height: 30px;
-    width: 100%;
-    line-height: normal;
-    overflow: hidden;
-    text-align: center;
-  }
-
   .title {
     color: rgb(218, 91, 32);
     font-size: 12px;
     text-align: center;
   }
-
-  figure {
-    margin: 0;
-    padding: 0;
-    background: #fff;
-    overflow: hidden;
-  }
-
   .text-div img {
     -webkit-transform: scale(1);
     transform: scale(1);
@@ -456,12 +415,7 @@ while ($row = mysqli_fetch_object($res)) {
     transform: scale(1.1);
   }
 
-  .viewmore {
-    border-radius: 18px;
-    /* width:50%; */
-    background-color: rgb(22, 141, 58);
-    color: white;
-  }
+ */
 
   .viewmore:hover {
     border-color: rgb(22, 141, 58);
