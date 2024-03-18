@@ -141,30 +141,34 @@ while ($row = mysqli_fetch_object($res)) {
         $description = $row->description;
         $brand = $row->brand;
       ?>
-        <a href="login.php?pid= <?php echo $prodid; ?>">
-        <div class="col">
-    <div class="card custom-card border-0 shadow-lg hover-zoom" style="background-color: rgba(169, 169, 169, 0.65);">
-        <div class="img-container overflow-hidden">
-            <img src="product_image/<?php echo $img; ?>" alt="<?php echo $name; ?>" class="card-img-top custom-card-img shadow" style="height: 200px; object-fit: cover; transition: transform 0.3s ease-in-out;">
-        </div>
-        <div class="card-body">
-            <h4 class="card-title product-label" style="color: black;">Product: <?php echo $name;?></h4>
-            <p class="card-text " style="color: black;">Brand: <?php echo $brand; ?></p>
-            <p class="card-text product-description-label" style="color: black;">Description: <br> <?php echo $description; ?></p>
-        </div>
-        <div class="card-footer bg-red d-flex justify-content-between align-items-center shadow">
-            <div class="rating text-warning">
-                <label for="asd" class="fw-bold">Rating:</label>
-                <span class="fw-bold"><?php echo $points; ?></span>
-                <i class="fa fa-star"></i>
-            </div>
-            <div class="text-black">Sold: <span class="fw-bold"><?php echo $sold; ?></span></div>
-        </div>
-    </div>
-</div>
+          <div class="col ">
+              <div class="card custom-card border-0 shadow-lg hover-zoom" style="background-color: #fffafa;">
+                  <div class="img-container overflow-hidden">
+                    <img src="product_image/<?php echo $img; ?>" alt="<?php echo $name; ?>" class="card-img-top custom-card-img shadow" style="height: 200px; object-fit: cover; transition: transform 0.3s ease-in-out;" onclick="openPopup('<?php echo $img; ?>')">
+                </div>
+                    <a href="login.php?pid= <?php echo $prodid; ?>">
 
-        </a>
+                      <div class="card-body">
+                          <h4 class="card-title product-label" style="color: black;">Product: <?php echo $name;?></h4>
+                          <p class="card-text " style="color: black;">Brand: <?php echo $brand; ?></p>
+                          <p class="card-text product-description-label" style="color: black;">Description: <br> <?php echo $description; ?></p>
+                      </div>
+                    </a>  
+                    <div class="card-footer bg-red d-flex justify-content-between align-items-center shadow">
+                        <div class="rating text-warning">
+                            <label for="asd" class="fw-bold">Rating:</label>
+                            <span class="fw-bold"><?php echo $points; ?></span>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <div class="text-black">Sold: <span class="fw-bold"><?php echo $sold; ?></span></div>
+                    </div>
+              </div>
+            </div>
+
       <?php } ?>
+      <div id="popup" class="popup" onclick="closePopup()">
+        <img id="popupImage" src="" alt="Popup Image">
+    </div>
     </div>
   </div>
   <br>
@@ -354,6 +358,16 @@ while ($row = mysqli_fetch_object($res)) {
 <script src="js/owl.js"></script>
 
 </html>
-<style>
- 
-</style>
+<script>
+       function openPopup(imageSrc) {
+            var popup = document.getElementById("popup");
+            var popupImage = document.getElementById("popupImage");
+            popup.style.display = "block";
+            popupImage.src = "product_image/" + imageSrc;
+        }
+
+        function closePopup() {
+            var popup = document.getElementById("popup");
+            popup.style.display = "none";
+        }
+    </script>
